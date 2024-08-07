@@ -2,9 +2,9 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import { fontSans } from "@/lib/fonts"
-import { MetaTags } from "@/data/config"
+import { HeadTags } from "@/data/config"
 
-export const metadata: Metadata = MetaTags
+export const metadata: Metadata = HeadTags
 
 export default function RootLayout({
   children,

@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 
-export const MetaTags: Metadata = {
+export const HeadTags: Metadata = {
   title: "Mertcan Öncül | Freelance Web Developer",
   authors: [{ name: "Mertcan Öncül", url: "https://mertcanoncul.com" }],
   description:
@@ -26,4 +26,12 @@ export const MetaTags: Metadata = {
     description:
       "I'm Mertcan, a Freelance Web Developer. I create aesthetically and functionally powerful web projects by blending my technical knowledge and skills with creativity.",
   },
+  publisher: "Mertcan Öncül",
+  icons: [
+    {
+      url: "/images/favicon.png",
+      sizes: "32x32",
+      type: "image/png",
+    },
+  ],
 }
