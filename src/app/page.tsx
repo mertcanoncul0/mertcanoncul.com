@@ -9,19 +9,12 @@ export default function Home() {
 
   return (
     <main className="bg-black h-full p-4 flex items-center flex-col">
-      <h1
-        className={cn(
-          "text-white text-3xl pb-4",
-          name.split(" ").length > 2 && "ml-20"
-        )}
-      >
-        {name}
-      </h1>
+      <h1 className={cn("text-white text-3xl pb-4")}>{name}</h1>
       <Button
         variant="secondary"
         size="lg"
         className="bg-white text-black text-2xl font-bold hover:bg-white/70"
-        onClick={() => setName("Mertcan Öncül | Frontend Developer")}
+        onClick={() => setName("Frontend Developer")}
       >
         Click me
       </Button>
