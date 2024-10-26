@@ -1,81 +1,81 @@
 {
-    "person": {
-        "role": "Design Engineer"
-    },
-    "newsletter": {
-        "title": "Subscribe to {firstName}'s Newsletter",
-        "description": "I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering",
-        "button": "Sign up"
-    },
-    "home": {
-        "label": "Home",
-        "title": "{name}'s Portfolio",
-        "description": "Portfolio website showcasing my work as a {role}",
-        "headline": "Design engineer and builder",
-        "subline": "I'm Selene, a design engineer at FLY, where I craft intuitive user experiences. After hours, I build my own projects."
-    },
-    "about": {
-        "label": "About",
-        "title": "About me",
-        "description": "Meet {name}, {role} from {location}",
-        "intro": {
-            "title": "Introduction",
-            "description": "Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology."
-        },
-        "work": {
-            "title": "Work Experience",
-            "experiences": {
-                "FLY": {
-                    "timeframe": "2022 - Present",
-                    "role": "Senior Design Engineer",
-                    "achievements": "Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.;Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster."
-                },
-                "Creativ3": {
-                    "timeframe": "2018 - 2022",
-                    "role": "Lead Designer",
-                    "achievements": "Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.;Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue."
-                }
-            }
-        },
-        "studies": {
-            "title": "Studies",
-            "institutions": {
-                "University of Jakarta": {
-                    "description": "Studied software engineering."
-                },
-                "Build the Future": {
-                    "description": "Studied online marketing and personal branding."
-                }
-            }
-        },
-        "technical": {
-            "title": "Technical skills",
-            "skills": {
-                "Figma": {
-                    "description": "Able to prototype in Figma with Once UI with unnatural speed."
-                },
-                "Nextjs": {
-                    "description": "Building next gen apps with Next.js + Once UI + Supabase."
-                }
-            }
-        }
-    },
-    "blog": {
-        "label": "Blog",
-        "title": "Writing about design and tech...",
-        "description": "Read what {name} has been up to recently"
+  "person": {
+    "role": "Frontend Developer"
+  },
+  "newsletter": {
+    "title": "Subscribe to Newsletter",
+    "description": "Subscribe to the Newsletter and receive the latest articles, updates and more.",
+    "button": "Subscribe"
+  },
+  "home": {
+    "label": "Home",
+    "title": "{name}'s Portfolio ",
+    "description": "A portfolio website showcasing my work as {role}",
+    "headline": "Frontend Developer",
+    "subline": "I am a front-end developer with 1 year of experience in building innovative web applications using React.js and Next.js. I am passionate about building responsive, user-friendly applications that provide a seamless user experience."
+  },
+  "about": {
+    "label": "About",
+    "title": "About me",
+    "description": "Get to know me {name}, {role} from {location}",
+    "intro": {
+      "title": "About me",
+      "description": "Front-end developer with 1 year of experience in building innovative web applications using the latest technologies such as React.js and Next.js. Passionate about building high-quality, responsive, and user-friendly applications that deliver a seamless experience to users. Strong problem-solving skills and ability to work in a fast-paced, collaborative environment. I also enjoy sharing my knowledge and participating in developer communities. I am currently preparing for university studies."
     },
     "work": {
-        "label": "Work",
-        "title": "My projects",
-        "description": "Design and dev projects by {name}"
+      "title": "Work Experience",
+      "experiences": {
+        "netdunyasi": {
+          "timeframe": "2021 - 2022",
+          "role": "Software Intern",
+          "achievements": "I have gained experience in website development with php, mysql and bootstrap."
+        }
+      }
     },
-    "gallery": {
-        "label": "Gallery",
-        "title": "My photo gallery",
-        "description": "A photo collection by {name}"
+    "studies": {
+      "title": "Educations",
+      "institutions": {
+        "University of Nisantasi": {
+          "title": "Nişantaşı University",
+          "description": "Acunmedya Academy Nişantaşı University."
+        }
+      }
     },
-    "projectCard": {
-        "label": "Read Case Study"
+
+    "technical": {
+      "title": "Technical Skills",
+      "skills": {
+        "Nextjs": {
+          "description": "Next.js build next generation applications."
+        },
+        "React": {
+          "description": "Build innovative web applications with React.js."
+        },
+        "Typescript": {
+          "description": "Create interactive web applications with Typescript."
+        },
+        "Tailwindcss": {
+          "description": "Build fast and responsive websites with Tailwind CSS."
+        }
+      }
     }
+  },
+  "blog": {
+    "label": "Blog",
+    "title": "My blogs about software and technology",
+    "description": "Read what {name} has been up to recently"
+  },
+  "work": {
+    "label": "Work",
+    "title": "Works",
+    "description": "{name}'s software works, frontend, backend and more"
+  },
+  "gallery": {
+    "label": "Galery",
+    "title": "Galery",
+    "description": "{name}'s Gallery Collection"
+  },
+  "projectCard": {
+    "label": "read more"
+  }
 }

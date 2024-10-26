@@ -1,102 +1,103 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
 
 type Team = {
-    name: string;
-    role: string;
-    avatar: string;
-    linkedIn: string;
-};
+  name: string
+  role: string
+  avatar: string
+  linkedIn: string
+}
 
 type Metadata = {
-    title: string;
-    publishedAt: string;
-    summary: string;
-    image?: string;
-    images: string[];
-    team: Team[];
-};
+  title: string
+  publishedAt: string
+  summary: string
+  image?: string
+  images: string[]
+  team: Team[]
+  link?: string
+  githubLink?: string
+  frontendMentorLink?: string
+}
 
 function getMDXFiles(dir: string) {
-    if (!fs.existsSync(dir)) {
-        throw new Error(`Directory not found: ${dir}`);
-    }
+  if (!fs.existsSync(dir)) {
+    throw new Error(`Directory not found: ${dir}`)
+  }
 
-    return fs.readdirSync(dir).filter((file) => path.extname(file) === '.mdx');
+  return fs.readdirSync(dir).filter((file) => path.extname(file) === '.mdx')
 }
 
 function readMDXFile(filePath: string) {
-    if (!fs.existsSync(filePath)) {
-        throw new Error(`File not found: ${filePath}`);
-    }
+  if (!fs.existsSync(filePath)) {
+    throw new Error(`File not found: ${filePath}`)
+  }
 
-    const rawContent = fs.readFileSync(filePath, 'utf-8');
-    const { data, content } = matter(rawContent);
+  const rawContent = fs.readFileSync(filePath, 'utf-8')
+  const { data, content } = matter(rawContent)
 
-    const metadata: Metadata = {
-        title: data.title || '',
-        publishedAt: data.publishedAt,
-        summary: data.summary || '',
-        images: data.images || [],
-        team: data.team || [],
-    };
+  const metadata: Metadata = {
+    title: data.title || '',
+    publishedAt: data.publishedAt,
+    summary: data.summary || '',
+    images: data.images || [],
+    team: data.team || [],
+    link: data.link || '',
+    githubLink: data.githubLink || '',
+    frontendMentorLink: data.frontendMentorLink || '',
+  }
 
-    return { metadata, content };
+  return { metadata, content }
 }
 
 function getMDXData(dir: string) {
-    const mdxFiles = getMDXFiles(dir);
-    return mdxFiles.map((file) => {
-        const { metadata, content } = readMDXFile(path.join(dir, file));
-        const slug = path.basename(file, path.extname(file));
+  const mdxFiles = getMDXFiles(dir)
+  return mdxFiles.map((file) => {
+    const { metadata, content } = readMDXFile(path.join(dir, file))
+    const slug = path.basename(file, path.extname(file))
 
-        return {
-            metadata,
-            slug,
-            content,
-        };
-    });
+    return {
+      metadata,
+      slug,
+      content,
+    }
+  })
 }
 
 export function getPosts(customPath = ['', '', '', '']) {
-    const postsDir = path.join(process.cwd(), ...customPath);
-    return getMDXData(postsDir);
+  const postsDir = path.join(process.cwd(), ...customPath)
+  return getMDXData(postsDir)
 }
 
-export function formatDate(date: string, includeRelative = false) {
-    const currentDate = new Date();
+export function formatDate(date: string, locale: string) {
+  if (!date.includes('T')) {
+    date = `${date}T00:00:00`
+  }
 
-    if (!date.includes('T')) {
-        date = `${date}T00:00:00`;
-    }
+  const targetDate = new Date(date)
 
-    const targetDate = new Date(date);
-    const yearsAgo = currentDate.getFullYear() - targetDate.getFullYear();
-    const monthsAgo = currentDate.getMonth() - targetDate.getMonth();
-    const daysAgo = currentDate.getDate() - targetDate.getDate();
+  const fullDate = targetDate.toLocaleString(locale, {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  })
 
-    let formattedDate = '';
+  const pad = (num: number) => String(num).padStart(2, '0')
 
-    if (yearsAgo > 0) {
-        formattedDate = `${yearsAgo}y ago`;
-    } else if (monthsAgo > 0) {
-        formattedDate = `${monthsAgo}mo ago`;
-    } else if (daysAgo > 0) {
-        formattedDate = `${daysAgo}d ago`;
-    } else {
-        formattedDate = 'Today';
-    }
+  let fullDateNumeric = ''
 
-    const fullDate = targetDate.toLocaleString('en-us', {
-        month: 'long',
-        day: 'numeric',
-        year: 'numeric',
-    });
+  if (locale === 'tr') {
+    fullDateNumeric = `${pad(targetDate.getDate())}-${pad(
+      targetDate.getMonth() + 1
+    )}-${targetDate.getFullYear()}`
+  }
 
-    if (!includeRelative) {
-        return fullDate;
-    }
+  if (locale === 'en') {
+    fullDateNumeric = `${pad(targetDate.getMonth() + 1)}-${pad(
+      targetDate.getDate()
+    )}-${targetDate.getFullYear()}`
+  }
 
-    return `${fullDate} (${formattedDate})`;
+  return { fullDate, fullDateNumeric }
 }
