@@ -1,13 +1,11 @@
 name: mertcanoncul.com
 type: docker
 port: 3000
+image: mertcanoncul0/mertcanoncul.com:latest
 environment:
   - NODE_ENV=production
   - PORT=3000
   - NEXT_TELEMETRY_DISABLED=1
-build:
-  dockerfile: Dockerfile
-  context: .
 deploy:
   replicas: 1
   resources:
@@ -19,3 +17,4 @@ healthcheck:
   timeout: 3s
   retries: 3
   start_period: 5s
+auto_deploy: true

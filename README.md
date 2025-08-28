@@ -1,82 +1,94 @@
-# **Build your portfolio with Once UI's Magic Portfolio**
+# Mertcan Öncül Portfolio
 
-Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
+Modern portfolio website built with Next.js, TypeScript, and Tailwind CSS.
 
-**1. Clone the repository**
+## 🚀 Production Deployment
+
+This project uses **CI/CD pipeline** for production deployment:
+
+1. **GitHub Actions** builds the Docker image
+2. **Docker Hub** stores the image
+3. **Dokploy** deploys the image
+
+### 🔧 Setup Requirements
+
+#### GitHub Secrets
+Add these secrets to your GitHub repository:
+
+- `DOCKERHUB_USERNAME`: Your Docker Hub username
+- `DOCKERHUB_TOKEN`: Your Docker Hub access token
+- `DOKPLOY_APP_ID`: Your Dokploy application ID
+- `DOKPLOY_API_KEY`: Your Dokploy API key
+- `DOKPLOY_URL`: Your Dokploy instance URL
+
+#### Docker Hub
+1. Create a repository: `mertcanoncul0/mertcanoncul.com`
+2. Generate access token in Docker Hub settings
+
+#### Dokploy
+1. Create application with type: `docker`
+2. Set image: `mertcanoncul0/mertcanoncul.com:latest`
+3. Configure port: `3000`
+4. Set health check path: `/api/health`
+
+### 📋 Deployment Flow
+
+1. Push to `main` branch
+2. GitHub Actions builds Docker image
+3. Image pushed to Docker Hub
+4. Dokploy automatically deploys new image
+5. Health checks ensure zero-downtime deployment
+
+### 🏥 Health Check
+
+Health check endpoint: `/api/health`
+
+Returns:
+```json
+{
+  "status": "ok",
+  "timestamp": "2024-01-01T00:00:00.000Z",
+  "uptime": 123.45,
+  "environment": "production",
+  "port": 3000
+}
 ```
-git clone https://github.com/once-ui-system/magic-portfolio.git
+
+## 🛠️ Local Development
+
+```bash
+# Install dependencies
+pnpm install
+
+# Run development server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Start production server
+pnpm start
 ```
 
-**2. Install dependencies**
-```
-npm install
-```
+## 🐳 Docker
 
-**3. Run dev server**
-```
-npm run dev
-```
+```bash
+# Build image
+docker build -t mertcanoncul.com .
 
-**4. Edit config**
-```
-src/app/resources/config
+# Run container
+docker run -p 3000:3000 mertcanoncul.com
+
+# Using docker-compose
+docker-compose up
 ```
 
-**5. Edit content**
-```
-src/app/resources/content (or content-i18n for localization)
-```
+## 📱 Features
 
-**6. Create blog posts / projects**
-```
-Add a new .mdx file to src/app/[locale]/blog/posts or src/app/[locale]/work/projects
-```
-
-# **Features**
-
-## **Once UI**
-- All tokens, components & features of [Once UI](https://once-ui.com)
-
-## **SEO**
-- Automatic open-graph and X image generation with next/og
-- Automatic schema and metadata generation based on the content file
-
-## **Design**
-- Responsive layout optimized for all screen sizes
-- Timeless design without heavy animations and motion
-- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
-
-## **Content**
-- Render sections conditionally based on the content file
-- Enable or disable pages for blog, work, gallery and about / CV
-- Generate and display social links automatically
-- Set up password protection for URLs
-
-## **Localization (NEW)**
-- Magic Portfolio now supports localization with the next-intl library
-- See more info in resources/config.js
-
-# **Authors**
-
-Connect with us on Threads or LinkedIn.
-
-Lorant Toth: [Threads](https://www.threads.net/@lorant.one), [LinkedIn](https://www.linkedin.com/in/tothlorant/)  
-Zsofia Komaromi: [Threads](https://www.threads.net/@zsofia_kom), [LinkedIn](https://www.linkedin.com/in/zsofiakomaromi/)
-
-Localization added by [François Hernandez](https://github.com/francoishernandez)
-
-# **Get involved**
-
-- Join the [Design Engineers Club on Discord](https://discord.com/invite/5EyAQ4eNdS) and share your portfolio with us!
-- Report a [bug](https://github.com/once-ui-system/magic-portfolio/issues/new?labels=bug&template=bug_report.md).
-
-# **License**
-
-Distributed under the CC BY-NC 4.0 License.
-- Commercial usage is not allowed.
-- Attribution is required.
-
-See `LICENSE.txt` for more information.
-
-# **Deploy with Vercel**
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=https%3A%2F%2Fonce-ui.com%2Fimages%2Ftemplates%2Fmagic-portfolio%2Fcover.jpg)
+- 🌍 Internationalization (TR/EN)
+- 📱 Responsive design
+- 🎨 Modern UI with Tailwind CSS
+- 📝 MDX blog support
+- 🖼️ Image gallery
+- 🔒 Password protection for selected routes
+- 🚀 Optimized for production

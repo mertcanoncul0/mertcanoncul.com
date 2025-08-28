@@ -15,6 +15,9 @@ const nextConfig = {
   experimental: {
     outputFileTracingRoot: undefined,
   },
+  // Production optimizations
+  compress: true,
+  poweredByHeader: false,
   // Dokploy için gerekli
   async headers() {
     return [
@@ -28,6 +31,10 @@ const nextConfig = {
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
           },
         ],
       },
