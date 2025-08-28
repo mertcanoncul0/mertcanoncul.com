@@ -1,0 +1,20 @@
+@import "@/once-ui/styles/spacing.scss";
+@import "@/once-ui/styles/border.scss";
+@import "@/once-ui/styles/color.scss";
+@import "@/once-ui/styles/background.scss";
+@import "@/once-ui/styles/typography.scss";
+@import "@/once-ui/styles/global.scss";
+@import "@/once-ui/styles/layout.scss";
+@import "@/once-ui/styles/shadow.scss";
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

@@ -1,0 +1,81 @@
+{
+  "person": {
+    "role": "Frontend Developer"
+  },
+  "newsletter": {
+    "title": "Bülten'e Abone Olun",
+    "description": "Bülten'e abone olun ve en son yazıları, güncellemeleri ve daha fazlasını alın. ",
+    "button": "Abone Ol"
+  },
+  "home": {
+    "label": "Anasayfa",
+    "title": "{name}'ün Portföyü",
+    "description": "Mertcan Öncül, React.js ve Next.js gibi modern teknolojilerle yenilikçi, duyarlı ve kullanıcı dostu web uygulamaları geliştiren deneyimli bir ön uç geliştirici.",
+    "headline": "Frontend Developer",
+    "subline": "React.js ve Next.js kullanarak yenilikçi web uygulamaları oluşturma konusunda 1 yıllık deneyime sahip bir ön uç geliştiricisiyim. Sorunsuz bir kullanıcı deneyimi sağlayan duyarlı, kullanıcı dostu uygulamalar oluşturma konusunda tutkuluyum."
+  },
+  "about": {
+    "label": "Hakkımda",
+    "title": "Mertcan Öncül | Benim Hakkımda",
+    "description": "Mertcan Öncül, React.js ve Next.js gibi modern teknolojilerle yenilikçi, duyarlı ve kullanıcı dostu web uygulamaları geliştiren deneyimli bir ön uç geliştirici.",
+    "intro": {
+      "title": "Hakkımda",
+      "description": "React.js ve Next.js gibi en son teknolojileri kullanarak yenilikçi web uygulamaları oluşturma konusunda 1 yıllık deneyime sahip ön uç geliştirici. Kullanıcılara sorunsuz bir deneyim sunan yüksek kaliteli, duyarlı ve kullanıcı dostu uygulamalar oluşturma konusunda tutkulu. Güçlü problem çözme becerileri ve hızlı tempolu, işbirlikçi bir ortamda çalışma yeteneği. Bilgimi paylaşmaktan ve geliştirici topluluklarına katılmaktan da keyif alıyorum. Şu anda üniversite eğitimi için hazırlanıyorum."
+    },
+    "work": {
+      "title": "İş Deneyimim",
+      "experiences": {
+        "netdunyasi": {
+          "timeframe": "2021 - 2022",
+          "role": "Yazılım Stajyeri",
+          "achievements": "php, mysql ve bootstrap ile web sitesi geliştirme konusunda deneyim kazandım."
+        }
+      }
+    },
+    "studies": {
+      "title": "Eğitimlerim",
+      "institutions": {
+        "University of Nisantasi": {
+          "title": "Nişantaşı Üniversitesi",
+          "description": "Acunmedya Akademi Nişantaşı Üniversitesi."
+        }
+      }
+    },
+    "technical": {
+      "title": "Teknik Yetenekler",
+      "skills": {
+        "Nextjs": {
+          "description": "Next.js yeni nesil uygulamalar oluşturun."
+        },
+        "React": {
+          "description": "React.js ile yenilikçi web uygulamaları oluşturun."
+        },
+        "Typescript": {
+          "description": "Typescript ile etkileşimli web uygulamaları oluşturun."
+        },
+        "Tailwindcss": {
+          "description": "Tailwind CSS ile hızlı ve duyarlı web siteleri oluşturun."
+        }
+      }
+    }
+  },
+  "blog": {
+    "label": "Blog",
+    "title": "Mertcan Öncül | Blog",
+    "headline": "Yazılım ve teknoloji hakkında bloglarım",
+    "description": "Frontend geliştirme, React.js ve Next.js üzerine deneyimlerimi ve yenilikleri paylaştığım blog. Geliştiricilere yönelik ipuçları, yeni araçlar ve modern web geliştirme trendleri hakkında bilgi almak isteyenler için kaynak."
+  },
+  "work": {
+    "label": "Çalışmalar",
+    "title": "Mertcan Öncül | Çalışmalarım",
+    "description": "React.js ve Next.js teknolojileri ile geliştirdiğim yenilikçi projeler ve web uygulamaları. Yüksek kaliteli, kullanıcı dostu ve duyarlı çözümler sunarak kullanıcı deneyimini ön planda tutuyorum. Projelerimde modern teknolojiler ve yaratıcı çözümlerle nasıl değer kattığımı inceleyin."
+  },
+  "gallery": {
+    "label": "Galeri",
+    "title": "Galeri",
+    "description": "{name}'ün Fotoraf Koleksiyonu"
+  },
+  "projectCard": {
+    "label": "daha fazla oku"
+  }
+}

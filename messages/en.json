@@ -1,0 +1,82 @@
+{
+  "person": {
+    "role": "Frontend Developer"
+  },
+  "newsletter": {
+    "title": "Subscribe to Newsletter",
+    "description": "Subscribe to the Newsletter and receive the latest articles, updates and more.",
+    "button": "Subscribe"
+  },
+  "home": {
+    "label": "Home",
+    "title": "{name}'s Portfolio ",
+    "description": "Mertcan Öncül is an experienced front-end developer who builds innovative, responsive and user-friendly web applications with modern technologies such as React.js and Next.js.",
+    "headline": "Frontend Developer",
+    "subline": "I am a front-end developer with 1 year of experience in building innovative web applications using React.js and Next.js. I am passionate about building responsive, user-friendly applications that provide a seamless user experience."
+  },
+  "about": {
+    "label": "About",
+    "title": "Mertcan Öncül's | About me",
+    "description": "Mertcan Öncül is an experienced front-end developer who builds innovative, responsive and user-friendly web applications with modern technologies such as React.js and Next.js.",
+    "intro": {
+      "title": "About me",
+      "description": "Front-end developer with 1 year of experience in building innovative web applications using the latest technologies such as React.js and Next.js. Passionate about building high-quality, responsive, and user-friendly applications that deliver a seamless experience to users. Strong problem-solving skills and ability to work in a fast-paced, collaborative environment. I also enjoy sharing my knowledge and participating in developer communities. I am currently preparing for university studies."
+    },
+    "work": {
+      "title": "Work Experience",
+      "experiences": {
+        "netdunyasi": {
+          "timeframe": "2021 - 2022",
+          "role": "Software Intern",
+          "achievements": "I have gained experience in website development with php, mysql and bootstrap."
+        }
+      }
+    },
+    "studies": {
+      "title": "Educations",
+      "institutions": {
+        "University of Nisantasi": {
+          "title": "Nişantaşı University",
+          "description": "Acunmedya Academy Nişantaşı University."
+        }
+      }
+    },
+
+    "technical": {
+      "title": "Technical Skills",
+      "skills": {
+        "Nextjs": {
+          "description": "Next.js build next generation applications."
+        },
+        "React": {
+          "description": "Build innovative web applications with React.js."
+        },
+        "Typescript": {
+          "description": "Create interactive web applications with Typescript."
+        },
+        "Tailwindcss": {
+          "description": "Build fast and responsive websites with Tailwind CSS."
+        }
+      }
+    }
+  },
+  "blog": {
+    "label": "Blog",
+    "title": "Mertcan Öncül's | Blog",
+    "headline": "My blogs about software and technology",
+    "description": "A blog where I share my experiences and innovations on frontend development, React.js and Next.js. A resource for developers who want to learn about developer tips, new tools and modern web development trends."
+  },
+  "work": {
+    "label": "Work",
+    "title": "Mertcan Öncül's | Works",
+    "description": "Innovative projects and web applications developed with React.js and Next.js technologies. I prioritize user experience by providing high-quality, user-friendly and responsive solutions. See how I add value to my projects with modern technologies and creative solutions."
+  },
+  "gallery": {
+    "label": "Galery",
+    "title": "Galery",
+    "description": "{name}'s Gallery Collection"
+  },
+  "projectCard": {
+    "label": "read more"
+  }
+}
