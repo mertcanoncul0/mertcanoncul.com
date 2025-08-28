@@ -11,10 +11,6 @@ const withNextIntl = createNextIntlPlugin()
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "md", "mdx"],
-  output: 'standalone',
-  experimental: {
-    outputFileTracingRoot: undefined,
-  },
   // Dokploy için gerekli
   async headers() {
     return [
