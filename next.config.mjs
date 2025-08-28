@@ -11,6 +11,28 @@ const withNextIntl = createNextIntlPlugin()
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "md", "mdx"],
+  output: 'standalone',
+  experimental: {
+    outputFileTracingRoot: undefined,
+  },
+  // Dokploy için gerekli
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+        ],
+      },
+    ]
+  },
 }
 
 export default withNextIntl(withMDX(nextConfig))
